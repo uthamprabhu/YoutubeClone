@@ -1,0 +1,12 @@
+/* genres top nav */
+.genres-parent-container{
+    background-color: hotpink;
+    z-index: 50;
+    position: fixed;
+    top: 54px;
+    left: 230px;
+    right: 0;
+    bottom: 0;
+    height: 50px;
+    margin-left: 20px;
+  }
