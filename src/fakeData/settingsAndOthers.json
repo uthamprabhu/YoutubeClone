@@ -1,0 +1,18 @@
+[
+    {
+        "name": "Settings",
+        "icon": "settings"
+    },
+    {
+        "name": "Report History",
+        "icon": "reportHistory"
+    },
+    {
+        "name": "Help",
+        "icon": "help"
+    },
+    {
+        "name": "Send Feedback",
+        "icon": "sendFeedback"
+    }
+]

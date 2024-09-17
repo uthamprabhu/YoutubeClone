@@ -20,6 +20,16 @@ import courses from '../../icons/sidenav/explore/courses.svg'
 import fashionBeauty from '../../icons/sidenav/explore/fashionBeauty.svg'
 import podcasts from '../../icons/sidenav/explore/podcasts.svg'
 
+import uTubePremium from '../../icons/sidenav/moreFromUTube/uTubePremium.svg'
+import uTubeStudio from '../../icons/sidenav/moreFromUTube/uTubeStudio.svg'
+import uTubeMusic from '../../icons/sidenav/moreFromUTube/uTubeMusic.svg'
+import uTubeKids from '../../icons/sidenav/moreFromUTube/uTubeKids.svg'
+
+import settings from '../../icons/sidenav/settingsAndOthers/settings.svg'
+import reportHistory from '../../icons/sidenav/settingsAndOthers/reportHistory.svg'
+import help from '../../icons/sidenav/settingsAndOthers/help.svg'
+import sendFeedback from '../../icons/sidenav/settingsAndOthers/sendFeedback.svg'
+
 import rArrow from '../../icons/sidenav/You/rightArrow.svg'
 import history from '../../icons/sidenav/You/history.svg'
 import playlists from '../../icons/sidenav/You/playlists.svg'
@@ -30,6 +40,8 @@ import yourClips from '../../icons/sidenav/You/yourClips.svg'
 
 import subsData from '../../fakeData/Subs.json'
 import exploreData from '../../fakeData/explore.json'
+import moreFromUTube from '../../fakeData/moreFromUTube.json'
+import settingsAndOthers from '../../fakeData/settingsAndOthers.json'
 
 const Sidenav = () => {
     const sidenavRef = useRef(null);
@@ -46,6 +58,20 @@ const Sidenav = () => {
         courses: courses,
         fashionBeauty: fashionBeauty,
         podcasts: podcasts,
+    }
+
+    const moreFromUTubeIconsMap = {
+        uTubePremium: uTubePremium,
+        uTubeStudio: uTubeStudio,
+        uTubeMusic: uTubeMusic,
+        uTubeKids: uTubeKids
+    }
+
+    const settingsAndOthersIconsMap = {
+        settings: settings,
+        reportHistory: reportHistory,
+        help: help,
+        sendFeedback: sendFeedback
     }
 
     const [showMore, setShowMore] = useState(false)
@@ -232,6 +258,58 @@ const Sidenav = () => {
                         <span>{data.name}</span>
                     </div>
                 ))}
+            </div>
+
+            {/* more from YouTube */}
+            <div className='sidenav-second-child-container'>
+                <div className='sidenav-fourth-child-itemss' tabIndex="0">
+                    <span>More from YouTube</span>
+                </div>
+                {moreFromUTube.map((data, index) => (
+                    <div className='sidenav-fourth-child-items' tabIndex="0">
+                        <img
+                            src={moreFromUTubeIconsMap[data.icon]}
+                            alt={data.name}
+                        />
+                        <span>{data.name}</span>
+                    </div>
+                ))}
+            </div>
+
+            {/* settings And Others */}
+            <div className='sidenav-second-child-container'>
+                {settingsAndOthers.map((data, index) => (
+                    <div className='sidenav-fourth-child-items' tabIndex="0">
+                        <img
+                            src={settingsAndOthersIconsMap[data.icon]}
+                            alt={data.name}
+                        />
+                        <span>{data.name}</span>
+                    </div>
+                ))}
+            </div>
+
+            {/* last in the Sidebar */}
+            <div className='sidenav-last-child-container'>
+                <div className='sidenav-last-child-items1'>
+                    <span>About</span>
+                    <span>Press</span>
+                    <span>Copyright</span>
+                    <span>Contact us</span>
+                    <span>Creators</span>
+                    <span>Advertise</span>
+                    <span>Developers</span>
+                </div>
+                <div className='sidenav-last-child-items2'>
+                    <span>Terms</span>
+                    <span>Privacy</span>
+                    <span>Policy & Safety</span>
+                    <span>How YouTube works</span>
+                    <span>Test new features</span>
+                </div>
+                <div className='sidenav-last-child-items3'>
+                    © 2024 Google LLC
+                </div>
             </div>
         </div>
     )

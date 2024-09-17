@@ -11,38 +11,45 @@
   height: 654px;
 }
 
-.sidenav-parent-container:hover{
+.sidenav-parent-container:hover {
   overflow-y: auto;
 }
 
 /* WebKit Browsers */
 .sidenav-parent-container::-webkit-scrollbar {
-  width: 10px; /* Scrollbar width */
+  width: 10px;
+  /* Scrollbar width */
 }
 
 .sidenav-parent-container::-webkit-scrollbar-track {
-  background: #f1f1f1; /* Track color */
+  background: #f1f1f1;
+  /* Track color */
 }
 
 .sidenav-parent-container::-webkit-scrollbar-thumb {
-  background-color: #888; /* Scrollbar thumb color */
-  border-radius: 6px; /* Round the corners */
-  border: 2px solid #f1f1f1; /* Space around the thumb */
+  background-color: #888;
+  /* Scrollbar thumb color */
+  border-radius: 6px;
+  /* Round the corners */
+  border: 2px solid #f1f1f1;
+  /* Space around the thumb */
 }
 
 .sidenav-parent-container::-webkit-scrollbar-thumb:hover {
-  background-color: #555; /* Thumb color on hover */
+  background-color: #555;
+  /* Thumb color on hover */
 }
 
 /* Firefox */
 .sidenav-parent-container {
   scrollbar-width: thin;
-  scrollbar-color: #ababab #0F0F0F; /* Thumb color | Track color */
+  scrollbar-color: #ababab #0F0F0F;
+  /* Thumb color | Track color */
 }
 
 /* home shorts subs */
 
-.sidenav-first-child-container{
+.sidenav-first-child-container {
   /* background-color: aquamarine; */
   padding: 12px;
   width: 200px;
@@ -60,14 +67,17 @@
 .sidenav-first-child-container::after {
   content: "";
   position: absolute;
-  bottom: 0px; /* Move the border down */
-  left: 10px; /* Margin from the left */
-  right: 8px; /* Margin from the right */
+  bottom: 0px;
+  /* Move the border down */
+  left: 10px;
+  /* Margin from the left */
+  right: 8px;
+  /* Margin from the right */
   border-bottom: 1px solid #888;
   transform: scaleY(0.5);
 }
 
-.sidenav-first-child-items{
+.sidenav-first-child-items {
   /* background-color: rgb(113, 133, 60); */
   width: 100%;
   padding: 8px;
@@ -78,28 +88,28 @@
   box-sizing: border-box;
 }
 
-.sidenav-first-child-items:hover{
+.sidenav-first-child-items:hover {
   background-color: #222222;
   border-radius: 10px;
   cursor: pointer;
 }
 
-.sidenav-first-child-items:focus{
+.sidenav-first-child-items:focus {
   border-radius: 10px;
   background-color: #222222;
 }
 
-.sidenav-first-child-items img{
+.sidenav-first-child-items img {
   margin-right: 20px;
 }
 
-.sidenav-first-child-items span{
+.sidenav-first-child-items span {
   color: #fff;
 }
 
 /* YOU section */
 
-.sidenav-second-child-container{
+.sidenav-second-child-container {
   /* background-color: aquamarine; */
   padding: 12px;
   width: 200px;
@@ -117,16 +127,19 @@
 .sidenav-second-child-container::after {
   content: "";
   position: absolute;
-  bottom: 0px; /* Move the border down */
-  left: 0px; /* Margin from the left */
-  right: 8px; /* Margin from the right */
+  bottom: 0px;
+  /* Move the border down */
+  left: 0px;
+  /* Margin from the left */
+  right: 8px;
+  /* Margin from the right */
   border-bottom: 1px solid #888;
   transform: scaleY(0.5);
 }
 
 /* subscriptions section css */
 
-.sidenav-third-child-itemss{
+.sidenav-third-child-itemss {
   /* background-color: rgb(113, 133, 60); */
   width: 100%;
   padding: 8px;
@@ -139,11 +152,11 @@
   font-weight: 500;
 }
 
-.sidenav-third-child-itemss span{
+.sidenav-third-child-itemss span {
   color: #fff;
 }
 
-.sidenav-third-child-items{
+.sidenav-third-child-items {
   /* background-color: rgb(113, 133, 60); */
   width: 100%;
   padding: 8px;
@@ -154,22 +167,22 @@
   box-sizing: border-box;
 }
 
-.sidenav-third-child-items:hover{
+.sidenav-third-child-items:hover {
   background-color: #222222;
   border-radius: 10px;
   cursor: pointer;
 }
 
-.sidenav-third-child-items:focus{
+.sidenav-third-child-items:focus {
   border-radius: 10px;
   background-color: #222222;
 }
 
-.sidenav-third-child-items span{
+.sidenav-third-child-items span {
   color: #fff;
 }
 
-.sidenav-third-child-items img{
+.sidenav-third-child-items img {
   height: 25px;
   width: 25px;
   border-radius: 50%;
@@ -178,14 +191,15 @@
 
 .truncate {
   display: inline-block;
-  max-width: 140px; /* Adjust based on the approximate width of 10 characters */
+  max-width: 140px;
+  /* Adjust based on the approximate width of 10 characters */
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 /* Explore */
-.sidenav-fourth-child-itemss{
+.sidenav-fourth-child-itemss {
   /* background-color: rgb(113, 133, 60); */
   width: 100%;
   padding: 8px;
@@ -198,11 +212,11 @@
   font-weight: 500;
 }
 
-.sidenav-fourth-child-itemss span{
+.sidenav-fourth-child-itemss span {
   color: #fff;
 }
 
-.sidenav-fourth-child-items{
+.sidenav-fourth-child-items {
   /* background-color: rgb(113, 133, 60); */
   width: 100%;
   padding: 8px;
@@ -213,21 +227,70 @@
   box-sizing: border-box;
 }
 
-.sidenav-fourth-child-items:hover{
+.sidenav-fourth-child-items:hover {
   background-color: #222222;
   border-radius: 10px;
   cursor: pointer;
 }
 
-.sidenav-fourth-child-items:focus{
+.sidenav-fourth-child-items:focus {
   border-radius: 10px;
   background-color: #222222;
 }
 
-.sidenav-fourth-child-items span{
+.sidenav-fourth-child-items span {
   color: #fff;
 }
 
-.sidenav-fourth-child-items img{
+.sidenav-fourth-child-items img {
   margin-right: 20px;
+}
+
+/* laaast section of sidebar */
+
+.sidenav-last-child-container {
+  /* background-color: aquamarine; */
+  padding-left: 20px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.sidenav-last-child-items1 {
+  /* background-color: chartreuse; */
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.sidenav-last-child-items1 span {
+  color: #aaa;
+  margin-right: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.sidenav-last-child-items2 {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  /* line-height: 17px; */
+}
+
+.sidenav-last-child-items2 span {
+  color: #aaa;
+  margin-right: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.sidenav-last-child-items3 {
+  color: #717171;
+  font-size: small;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
