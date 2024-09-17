@@ -10,6 +10,15 @@ import showLesss from '../../icons/sidenav/subscriptions/showLess.svg'
 
 import trending from '../../icons/sidenav/explore/trending.svg'
 import shopping from '../../icons/sidenav/explore/shopping.svg'
+import music from '../../icons/sidenav/explore/music.svg'
+import movies from '../../icons/sidenav/explore/movies.svg'
+import live from '../../icons/sidenav/explore/live.svg'
+import gaming from '../../icons/sidenav/explore/gaming.svg'
+import news from '../../icons/sidenav/explore/news.svg'
+import sports from '../../icons/sidenav/explore/sports.svg'
+import courses from '../../icons/sidenav/explore/courses.svg'
+import fashionBeauty from '../../icons/sidenav/explore/fashionBeauty.svg'
+import podcasts from '../../icons/sidenav/explore/podcasts.svg'
 
 import rArrow from '../../icons/sidenav/You/rightArrow.svg'
 import history from '../../icons/sidenav/You/history.svg'
@@ -28,6 +37,15 @@ const Sidenav = () => {
     const exploreIconsMap = {
         trending: trending,
         shopping: shopping,
+        music: music,
+        movies: movies,
+        live: live,
+        gaming: gaming,
+        news: news,
+        sports: sports,
+        courses: courses,
+        fashionBeauty: fashionBeauty,
+        podcasts: podcasts,
     }
 
     const [showMore, setShowMore] = useState(false)
