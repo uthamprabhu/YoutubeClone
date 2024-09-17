@@ -2,10 +2,9 @@ import { useState } from 'react';
 
 import './Header.css'
 
-import create from '../../icons/youtube-create.svg'
 import logo from '../../icons/youtube-favicon.svg'
 
-const Header = () => {
+const Header = ({ toggleSidebar }) => {
 
     const [isFocused, setIsFocused] = useState(false);
 
@@ -20,7 +19,7 @@ const Header = () => {
     return (
         <div className="header-main-container">
             <div className="header-child-container-1">
-                <div className='hamburger-icon'>
+                <div className='hamburger-icon' onClick={toggleSidebar}>
                     <i className="fa-solid fa-bars" style={{ "color": "#fff" }}></i>
                 </div>
                 <div className='youtube-icon-parent'>

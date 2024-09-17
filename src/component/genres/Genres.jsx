@@ -1,8 +1,8 @@
 import './Genres.css'
 
-const Genres = () => {
+const Genres = ({ isShortSidebar }) => {
     return (
-        <div className="genres-parent-container">
+        <div className={`${isShortSidebar ? 'genresShortSidenavChange' : 'genres-parent-container'}`}>
             <div>skibidi</div>
         </div>
     )

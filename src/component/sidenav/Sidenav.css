@@ -11,6 +11,18 @@
   height: 654px;
 }
 
+.shortSidenav-parent-container {
+  /* background-color: rgb(88, 141, 189); */
+  overflow: hidden;
+  position: fixed;
+  top: 54px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 80px;
+  height: 654px;
+}
+
 .sidenav-parent-container:hover {
   overflow-y: auto;
 }

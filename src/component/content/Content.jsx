@@ -1,8 +1,8 @@
 import './Content.css'
 
-const Content = () => {
+const Content = ({ isShortSidebar }) => {
     return (
-        <div className="contents-parent-container">
+        <div className={`${isShortSidebar ? 'contentShortSidenavChange' : 'contents-parent-container'}`}>
             <div className='content-container'>ihsdhshshu</div>
             <div className='content-container'>ihsdhshshu</div>
             <div className='content-container'>ihsdhshshu</div>

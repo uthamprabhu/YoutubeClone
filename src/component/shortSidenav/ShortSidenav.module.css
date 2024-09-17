@@ -1,0 +1,33 @@
+.shortSidenavContainer {
+    /* background-color: aquamarine; */
+    width: 200px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.shortSidenavItems {
+    /* background-color: rgb(113, 133, 60); */
+    width: 60px;
+    height: auto;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center;
+    align-items: center;
+    padding: 10px; /* Add some padding for spacing */
+    margin-bottom: 10px; /* Add spacing between items */
+}
+
+.shortSidenavItems img {
+    width: 25px; /* Size of the icon */
+    height: 25px;
+    margin-bottom: 5px; /* Space between icon and text */
+}
+
+.shortSidenavItems span {
+    color: #fff;
+    font-size: x-small;
+    text-align: center; /* Center the text */
+}
