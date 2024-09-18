@@ -13,11 +13,18 @@
     width: 60px;
     height: auto;
     display: flex;
-    flex-direction: column; /* Stack items vertically */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 10px; /* Add some padding for spacing */
-    margin-bottom: 10px; /* Add spacing between items */
+    padding: 15px 2px;
+    margin-bottom: 1px;
+    margin-left: 4px;
+}
+
+.shortSidenavItems:hover{
+    cursor: pointer;
+    background-color: rgb(51, 51, 51);
+    border-radius: 10px;
 }
 
 .shortSidenavItems img {
