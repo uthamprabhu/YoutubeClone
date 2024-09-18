@@ -1,7 +1,7 @@
 /* content */
 
 .contents-parent-container {
-  background-color: yellowgreen;
+  /* background-color: yellowgreen; */
   position: relative;
   top: 106px;
   left: 250px;
@@ -9,10 +9,13 @@
   bottom: 0;
   width: calc(100% - 250px);
   min-height: 600px;
+
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .contentShortSidenavChange{
-  background-color: yellowgreen;
+  /* background-color: yellowgreen; */
   position: relative;
   top: 106px;
   left: 82px;
@@ -20,9 +23,108 @@
   bottom: 0;
   width: calc(100% - 82px);
   min-height: 600px;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content-main-container{
+  padding: 10px 10px 20px 10px;
 }
 
 .content-container {
-  background-color: cyan;
-  margin-bottom: 40px;
+  cursor: pointer;
+  /* background-color: rgb(217, 255, 0); */
+  width: 398px;
+  height: 364px;
+  /* margin-bottom: 20px; */
+}
+
+.content-container-short {
+  cursor: pointer;
+  /* background-color: rgb(217, 255, 0); */
+  width: 336px;
+  height: 330px;
+  /* margin-bottom: 20px; */
+}
+
+.thumbnail-container{
+  cursor: pointer;
+}
+
+.thumbnail{
+  position: relative;
+}
+
+.thumbnail img{
+  border-radius: 15px;
+}
+
+.videoLength{
+  position: absolute;
+  bottom: 13px;
+  right: 10px;
+  background-color: #1c1b1aae;
+  border-radius: 5px;
+  padding: 2px 4px;
+  color: #fff;
+  font-size: small;
+  font-weight: 500;
+}
+
+.body-container{
+  /* background-color: blueviolet; */
+  height: 100px;
+  display: flex;
+  padding-top: 10px;
+  position: relative;
+}
+
+.profileImage{
+  padding-right: 10px;
+}
+
+.profileImage img{
+  border-radius: 50%;
+}
+
+.videoTextInfos{
+  padding-right: 24px;
+  width: 82%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.videoHeadline {
+  color: #f1f1f1;
+  font-size: 16px;
+  font-weight: 600;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Limits the text to 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Adds ellipses for overflowing text */
+  line-height: 1.3; /* Adjust the line height if needed */
+  max-height: calc(1.2em * 2); /* Height for 2 lines based on line-height */
+}
+
+
+.channelName{
+  color: #aaa;
+  font-size: 14px;
+}
+
+.viewsUploadedAgo{
+  color: #aaa;
+  font-size: 14px;
+  display: flex;
+  gap: 4px;
+}
+
+.threeDots{
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
