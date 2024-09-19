@@ -1,25 +1,28 @@
 .header-main-container {
-  background-color: #0F0F0F;
+  background-color: #0f0f0fcc; /* Making the background semi-transparent */
   z-index: 50;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
-  display: flex;
-  justify-content: space-between;
   height: 50px;
   padding: 2px 16px;
+  display: flex;
+  justify-content: space-between;
+  
+  backdrop-filter: blur(50px); /* Applying the blur effect */
+  -webkit-backdrop-filter: blur(50px); /* Safari support */
 }
+
 
 /* header child 1 */
 .header-child-container-1 {
   /* background-color: rgb(240, 153, 22); */
   width: 200px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
 }
 
 .hamburger-icon {
@@ -39,14 +42,15 @@
   border-radius: 50%;
 }
 
-.youtube-icon {
-  vertical-align: middle;
+.hamburger-icon img{
 }
 
-.youtube-text {
-  color: white;
-  font-weight: 500;
-  font-size: 24px;
+.youtube-icon-parent {
+  cursor: pointer;
+}
+
+.youtube-icon-parent img{
+  margin-top: 5px;
 }
 
 /* header child 2 */
@@ -82,7 +86,7 @@
   padding: 5px 15px;
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
-  border: 1px solid rgb(123, 120, 120);
+  border: 1px solid #373737;
   width: 550px;
 }
 
@@ -100,11 +104,16 @@
 .search-icon {
   position: absolute;
   left: 405px;
-  top: 48%;
+  top: 55%;
   transform: translateY(-50%);
   color: #ccc;
   visibility: hidden; /* Initially hidden */
   opacity: 0;
+}
+
+.search-icon img{
+  width: 20px;
+  height: 20px;
 }
 
 .search-container.focused .search-icon {
@@ -123,7 +132,7 @@
   width: 50px;
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
-  border: 1px solid rgb(123, 120, 120);
+  border: 1px solid #373737;
   border-left: none;
 }
 
@@ -185,9 +194,7 @@
   align-items: center;
   font-size: larger;
   margin-left: 10px;
-
 }
-
 
 .bell:hover,
 .profile:hover {
@@ -195,4 +202,8 @@
   cursor: pointer;
   border-radius: 50%;
   border: none;
+}
+
+.profile img{
+  border-radius: 50%;
 }

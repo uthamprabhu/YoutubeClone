@@ -1,5 +1,6 @@
 /* sidenav */
 .sidenav-parent-container {
+  z-index: 100;
   overflow: hidden;
   /* background-color: rgb(88, 141, 189); */
   position: fixed;
@@ -12,6 +13,7 @@
 }
 
 .shortSidenav-parent-container {
+  z-index: 100;
   /* background-color: rgb(88, 141, 189); */
   overflow: hidden;
   position: fixed;

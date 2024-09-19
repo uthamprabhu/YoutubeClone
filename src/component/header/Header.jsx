@@ -2,7 +2,10 @@ import { useState } from 'react';
 
 import './Header.css'
 
-import logo from '../../icons/youtube-favicon.svg'
+import iconText from '../../icons/header/iconText.svg'
+import hamburger from '../../icons/header/hamburger.svg'
+import notification from '../../icons/header/notification.svg'
+import search from '../../icons/header/search.svg'
 
 const Header = ({ toggleSidebar }) => {
 
@@ -16,17 +19,16 @@ const Header = ({ toggleSidebar }) => {
         setIsFocused(false);
     };
 
+    const profilePicUrl = "https://yt3.ggpht.com/yti/ANjgQV9IPFA95B55VtsmN82k5R8rZLzxhUs1naqc3lTimpkxXyE=s88-c-k-c0x00ffffff-no-rj"
+
     return (
         <div className="header-main-container">
             <div className="header-child-container-1">
                 <div className='hamburger-icon' onClick={toggleSidebar}>
-                    <i className="fa-solid fa-bars" style={{ "color": "#fff" }}></i>
+                    <img src={hamburger} alt='hamburger icon' />
                 </div>
                 <div className='youtube-icon-parent'>
-                    <span className="youtube-icon">
-                        <img src={logo} alt='YouTube logo' height={35} width={35} />
-                    </span>&nbsp;
-                    <span className='youtube-text'>YouTube</span>
+                    <img src={iconText} alt='YouTube logo' />
                 </div>
             </div>
 
@@ -34,8 +36,7 @@ const Header = ({ toggleSidebar }) => {
                 <div className='search-parent-container'>
                     <div className={`search-container ${isFocused ? 'focused' : ''}`}>
                         <span className="search-icon">
-                            <i className="fa-solid fa-magnifying-glass" style={{ "color": "#fff" }}></i>
-                        </span>
+                            <img src={search} alt='hamburger icon' />                        </span>
                         <input
                             className={`search-input ${isFocused ? 'search-inputExtra' : ''}`}
                             type="text"
@@ -44,8 +45,7 @@ const Header = ({ toggleSidebar }) => {
                             onBlur={handleBlur}
                         />
                         <span className='search-btn'>
-                            <i className="fa-solid fa-magnifying-glass" style={{ "color": "#fff" }}></i>
-                        </span>
+                            <img src={search} alt='hamburger icon' />                        </span>
                     </div>
                     <div className='microphone'>
                         <i className="fa-solid fa-microphone" style={{ "color": "#fff" }}></i>
@@ -60,10 +60,10 @@ const Header = ({ toggleSidebar }) => {
                     &nbsp;
                 </div>
                 <div className='bell'>
-                    <i className="fa-regular fa-bell" style={{ "color": "#fff" }}></i>
+                    <img src={notification} alt='bell icon' />
                 </div>
                 <div className='profile'>
-                    <i className="fa-regular fa-user" style={{ "color": "#fff" }}></i>
+                    <img src={profilePicUrl} alt='profile picture' width={32} height={32} />
                 </div>
             </div>
         </div>

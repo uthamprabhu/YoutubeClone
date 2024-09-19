@@ -1,24 +1,88 @@
 /* genres top nav */
 .genres-parent-container {
-  background-color: hotpink;
+  background-color: #0f0f0fcc;
+  /* background-color: fuchsia; */
+  
   z-index: 50;
   position: fixed;
   top: 54px;
-  left: 230px;
+  left: 0px;
   right: 0;
   bottom: 0;
   height: 50px;
   margin-left: 20px;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  backdrop-filter: blur(50px); /* Applying the blur effect */
+  -webkit-backdrop-filter: blur(50px); /* Safari support */
 }
 
 .genresShortSidenavChange {
-  background-color: hotpink;
-  z-index: 50;
+  background-color: #0f0f0fcc;
+  /* background-color: fuchsia; */
+
   position: fixed;
   top: 54px;
-  left: 62px;
+  left: 0px;
   right: 0;
   bottom: 0;
   height: 50px;
   margin-left: 20px;
+  
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  backdrop-filter: blur(50px); /* Applying the blur effect */
+  -webkit-backdrop-filter: blur(50px); /* Safari support */
+}
+
+.genreSubContainerShort{
+  /* background-color: crimson; */
+  height: 100%;
+  width: 96%;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  gap: 10px;
+  box-sizing: border-box;
+  padding-left: 12px;
+}
+
+.genreSubContainer{
+  /* background-color: crimson; */
+  height: 100%;
+  width: 86%;
+  
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  gap: 10px;
+  box-sizing: border-box;
+  padding-left: 30px;
+}
+
+.genreItem{
+  box-sizing: border-box;
+  min-height: 32px;
+  background-color: #222;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #f1f1f1;
+  font-weight: 600;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.genreItem div{
+
 }
