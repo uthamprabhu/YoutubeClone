@@ -1,23 +1,35 @@
-import { useState } from 'react'
-import './Content.css'
-import videosData from '../../fakeData/videos.json'
-import threeDotsImg from '../../icons/content/threeDots.svg'
-import verified from '../../icons/content/verified.svg'
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate for navigation
+import './Content.css';
+import videosData from '../../fakeData/videos.json';
+import threeDotsImg from '../../icons/content/threeDots.svg';
+import verified from '../../icons/content/verified.svg';
 
 const Content = ({ isShortSidebar }) => {
-    const [videoData, setVideoData] = useState(videosData)
+    const [videoData, setVideoData] = useState(videosData);
+    const navigate = useNavigate(); // Use useNavigate for routing
 
+    // Shuffle function for random videos
     const shuffleArray = (array) => {
         return array.sort(() => Math.random() - 0.5);
     };
 
     const shuffledData = shuffleArray(videoData);
 
+    // Function to handle video click and navigate to /video/:videoId
+    const handleVideoClick = (videoId) => {
+        navigate(`/${videoId}`); // Navigate to the single video page
+    };
+
     return (
         <div className={`${isShortSidebar ? 'contentShortSidenavChange' : 'contents-parent-container'}`}>
             {shuffledData.map((data, index) => (
-                <div className='content-main-container'>
-                    <div key={index} className={`${isShortSidebar ? 'content-container-short' : 'content-container'}`}>
+                <div className='content-main-container' key={index}>
+                    <div
+                        className={`${isShortSidebar ? 'content-container-short' : 'content-container'}`}
+                        onClick={() => handleVideoClick(data.videoId)} // Navigate to video page
+                        style={{ cursor: 'pointer' }}
+                    >
                         <div className='thumbnail-container'>
                             <div className="thumbnail">
                                 <img
@@ -46,13 +58,14 @@ const Content = ({ isShortSidebar }) => {
                                         <img src={verified} alt='verified' width={14} height={14} />
                                     }
                                 </div>
-                                {data.sponsored === "true" ?
-                                    <></> :
+                                {data.sponsored === "true" ? (
+                                    <></>
+                                ) : (
                                     <div className="viewsUploadedAgo">
                                         <div className="views">{data.views}</div>•
                                         <div className="uploadedAgo">{data.uploadedAgo}&nbsp;ago</div>
                                     </div>
-                                }
+                                )}
                             </div>
                             <div className="threeDots">
                                 <img
@@ -65,7 +78,7 @@ const Content = ({ isShortSidebar }) => {
                 </div>
             ))}
         </div>
-    )
-}
+    );
+};
 
-export default Content
+export default Content;
