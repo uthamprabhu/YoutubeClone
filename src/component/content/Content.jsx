@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './Content.css'
 import videosData from '../../fakeData/videos.json'
 import threeDotsImg from '../../icons/content/threeDots.svg'
+import verified from '../../icons/content/verified.svg'
 
 const Content = ({ isShortSidebar }) => {
     const [videoData, setVideoData] = useState(videosData)
@@ -39,12 +40,17 @@ const Content = ({ isShortSidebar }) => {
                             </div>
                             <div className="videoTextInfos">
                                 <div className="videoHeadline">{data.videoHeadline}</div>
-                                <div className="channelName">{data.channelName}</div>
+                                <div className="channelName">
+                                    <div>{data.channelName}</div>
+                                    {data.isVerified === "true" &&
+                                        <img src={verified} alt='verified' width={14} height={14} />
+                                    }
+                                </div>
                                 {data.sponsored === "true" ?
                                     <></> :
                                     <div className="viewsUploadedAgo">
                                         <div className="views">{data.views}</div>•
-                                        <div className="uploadedAgo">{data.uploadedAgo}</div>
+                                        <div className="uploadedAgo">{data.uploadedAgo}&nbsp;ago</div>
                                     </div>
                                 }
                             </div>
