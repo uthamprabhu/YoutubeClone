@@ -6,9 +6,11 @@ import iconText from '../../icons/header/iconText.svg'
 import hamburger from '../../icons/header/hamburger.svg'
 import notification from '../../icons/header/notification.svg'
 import search from '../../icons/header/search.svg'
-import { Outlet } from 'react-router-dom';
+import { Outlet, useNavigate } from 'react-router-dom';
 
 const Header = ({ toggleSidebar }) => {
+
+    const nav = useNavigate()
 
     const [isFocused, setIsFocused] = useState(false);
 
@@ -29,7 +31,7 @@ const Header = ({ toggleSidebar }) => {
                     <div className='hamburger-icon' onClick={toggleSidebar}>
                         <img src={hamburger} alt='hamburger icon' />
                     </div>
-                    <div className='youtube-icon-parent'>
+                    <div className='youtube-icon-parent' onClick={() => nav('/')}>
                         <img src={iconText} alt='YouTube logo' />
                     </div>
                 </div>

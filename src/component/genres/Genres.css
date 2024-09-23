@@ -1,75 +1,64 @@
 /* genres top nav */
 .genres-parent-container {
-  background-color: #0f0f0fcc;
-  /* background-color: fuchsia; */
-  
+  /* background-color: #0f0f0fcc; */
+  background-color: deeppink;
   z-index: 50;
   position: fixed;
   top: 54px;
-  left: 0px;
+  left: 220px;
   right: 0;
   bottom: 0;
   height: 50px;
   margin-left: 20px;
-
+  
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
-
-  backdrop-filter: blur(50px); /* Applying the blur effect */
-  -webkit-backdrop-filter: blur(50px); /* Safari support */
+  
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
 }
 
 .genresShortSidenavChange {
-  background-color: #0f0f0fcc;
-  /* background-color: fuchsia; */
-
+  /* background-color: #0f0f0fcc; */
+  background-color: deeppink;
   position: fixed;
   top: 54px;
-  left: 0px;
+  left: 60px;
   right: 0;
   bottom: 0;
   height: 50px;
   margin-left: 20px;
   
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
 
-  backdrop-filter: blur(50px); /* Applying the blur effect */
-  -webkit-backdrop-filter: blur(50px); /* Safari support */
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
 }
 
 .genreSubContainerShort{
-  /* background-color: crimson; */
-  height: 100%;
-  width: 96%;
-
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-
-  gap: 10px;
-  box-sizing: border-box;
-  padding-left: 12px;
-}
-
-.genreSubContainer{
-  /* background-color: crimson; */
+  background-color: crimson;
   height: 100%;
   width: 86%;
-  
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-
-  gap: 10px;
+  overflow: hidden;
   box-sizing: border-box;
-  padding-left: 30px;
+  padding-left: 10px;
 }
 
-.genreItem{
+.genreSubContainer {
+  background-color: crimson;
+  height: 100%;
+  width: 86%;
+  display: flex;
+  overflow: hidden;
   box-sizing: border-box;
+  padding-left: 10px;
+}
+
+.genreItem {
   min-height: 32px;
   background-color: #222;
   padding: 6px 10px;
@@ -77,12 +66,36 @@
   font-size: 14px;
   color: #f1f1f1;
   font-weight: 600;
-
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-right: 10px;
+  white-space: nowrap;
 }
 
-.genreItem div{
+.arrow-button {
+  background-color: #D9DADB;
+  border: none;
+  height: 34px;
+  width: 34px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 2;
+}
 
+.arrow-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  color: #666666;
+}
+
+.arrow-button:focus {
+  outline: none;
+}
+
+.genre-scroll-container {
+  display: flex;
+  transition: transform 0.4s ease;
+  will-change: transform;
 }
