@@ -1,0 +1,20 @@
+.single-video-page {
+    padding: 20px;
+}
+
+.video-player {
+    margin-bottom: 20px;
+}
+
+.video-details {
+    margin-bottom: 20px;
+}
+
+.comments-section {
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+
+.comment {
+    margin: 5px 0;
+}
