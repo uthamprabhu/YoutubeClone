@@ -10,11 +10,11 @@
   bottom: 0;
   height: 50px;
   margin-left: 20px;
-  
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
+
   backdrop-filter: blur(50px);
   -webkit-backdrop-filter: blur(50px);
 }
@@ -29,7 +29,7 @@
   bottom: 0;
   height: 50px;
   margin-left: 20px;
-  
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -38,7 +38,7 @@
   -webkit-backdrop-filter: blur(50px);
 }
 
-.genreSubContainerShort{
+.genreSubContainerShort {
   /* background-color: crimson; */
   height: 100%;
   width: 100%;
@@ -144,4 +144,11 @@
 
 .arrow-button-right:focus {
   outline: none;
+}
+
+.arrow-button-left:hover,
+.arrow-button-right:hover {
+  background-color: rgb(62, 61, 61);
+  width: 32px;
+  height: 32px;
 }
